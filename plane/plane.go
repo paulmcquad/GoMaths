@@ -1,4 +1,4 @@
-package main
+package plane
 
 // fmt package provides the function to print anything
 import (
