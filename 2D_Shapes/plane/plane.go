@@ -21,6 +21,7 @@ func Menu() {
 	fmt.Println("4 - Midpoint of a line")
 	fmt.Println("5 - Slope of a line")
 	fmt.Println("6 - Distance")
+	fmt.Println("Input No:")
 
 	fmt.Scan(&menu)
 
