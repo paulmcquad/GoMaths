@@ -3,6 +3,7 @@ package main
 // fmt package provides the function to print anything
 import (
 	"fmt"
+	"plane/plane"
 )
 
 func main() {
@@ -23,5 +24,5 @@ func main() {
 	fmt.Scan(&radius)
 
 	// finding the Area of a Circle
-	Annulus(Radius, radius)
+	plane.Annulus(Radius, radius)
 }
