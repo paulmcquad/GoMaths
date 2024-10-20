@@ -8,6 +8,8 @@ import (
 
 // Plane - Menu
 func Menu() {
+	var x1, y1 float64
+	var x2, y2 float64
 	var Radius float64
 	var radius float64
 	var menu int64
@@ -16,6 +18,7 @@ func Menu() {
 	fmt.Println("1 - Area of a Circle")
 	fmt.Println("2 - Area of an Annulus")
 	fmt.Println("3 - Circumference of a Circle")
+	fmt.Println("4 - Midpoint of a line")
 
 	fmt.Scan(&menu)
 
@@ -29,6 +32,10 @@ func Menu() {
 	case 3:
 		CircumferenceOfCircle(radius)
 		break
+	case 4:
+		midpoint(x1, y1, x2, y2)
+		break
+
 	}
 }
 
@@ -79,5 +86,17 @@ func CircumferenceOfCircle(radius float64) float64 {
 	var Circumference float64 = 2 * math.Pi * radius
 
 	fmt.Println("The Circumference of the circle =", Circumference, "cm^2")
+	return 0
+}
+
+// Go program for midpoint of a line
+func midpoint(x1, y1, x2, y2 float64) float64 {
+
+	fmt.Printf("Type x1, y1: ")
+	fmt.Scan(&x1, &y1)
+	fmt.Printf("Type x2, y2: ")
+	fmt.Scan(&x2, &y2)
+
+	fmt.Printf("Midpoint: %g, %g\n", ((x1 + x2) / 2), ((y1 + y2) / 2))
 	return 0
 }
