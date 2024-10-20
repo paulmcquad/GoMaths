@@ -13,7 +13,6 @@ func Menu() {
 	var Radius float64
 	var radius float64
 	var menu int64
-	//var ret float64
 
 	fmt.Println("2D Shapes:")
 	fmt.Println("1 - Area of a Circle")
@@ -21,6 +20,7 @@ func Menu() {
 	fmt.Println("3 - Circumference of a Circle")
 	fmt.Println("4 - Midpoint of a line")
 	fmt.Println("5 - Slope of a line")
+	fmt.Println("6 - Distance")
 
 	fmt.Scan(&menu)
 
@@ -40,6 +40,10 @@ func Menu() {
 	case 5:
 		slope(x1, y1, x2, y2)
 		break
+	case 6:
+		distance(x1, y1, x2, y2)
+		break
+
 	}
 }
 
@@ -116,6 +120,22 @@ func slope(x1, y1, x2, y2 float64) float64 {
 	if x2-x1 != 0 {
 		//return (float64)(y2-y1) / (x2 - x1)
 		fmt.Printf("Scope is : %g\n", ((y2 - y1) / (x2 - x1)))
+	}
+	return 0
+}
+
+// Find the distance
+func distance(x1, y1, x2, y2 float64) float64 {
+
+	fmt.Printf("Type x1, y1: ")
+	fmt.Scan(&x1, &y1)
+	fmt.Printf("Type x2, y2: ")
+	fmt.Scan(&x2, &y2)
+
+	if x2-x1 != 0 {
+		fmt.Printf(
+			"Distance is : %g\n",
+			math.Sqrt((math.Pow(y2-y1, 2) + math.Pow(x2-x1, 2))))
 	}
 	return 0
 }
