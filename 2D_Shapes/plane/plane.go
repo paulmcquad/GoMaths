@@ -12,6 +12,7 @@ func Menu() {
 	var x2, y2 float64
 	var Radius float64
 	var radius float64
+	var base, height float64
 	var menu int64
 
 	fmt.Println("2D Shapes:")
@@ -21,6 +22,7 @@ func Menu() {
 	fmt.Println("4 - Midpoint of a line")
 	fmt.Println("5 - Slope of a line")
 	fmt.Println("6 - Distance")
+	fmt.Println("7 - Parallelogram")
 	fmt.Print("Input No: ")
 
 	fmt.Scan(&menu)
@@ -44,7 +46,9 @@ func Menu() {
 	case 6:
 		distance(x1, y1, x2, y2)
 		break
-
+	case 7:
+		Parallelogram(base, height)
+		break
 	}
 }
 
@@ -139,4 +143,15 @@ func distance(x1, y1, x2, y2 float64) float64 {
 			math.Sqrt((math.Pow(y2-y1, 2) + math.Pow(x2-x1, 2))))
 	}
 	return 0
+}
+
+// Parallelogram - Area
+func Parallelogram(base, height float64) {
+
+	fmt.Printf("Type base, height: ")
+	fmt.Scan(&base, &height)
+
+	var Area = base * height
+
+	fmt.Printf("Area: %g\n", Area)
 }
