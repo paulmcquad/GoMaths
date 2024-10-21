@@ -10,20 +10,48 @@ import (
 func Menu() {
 	var x1, y1 float64
 	var x2, y2 float64
-	var Radius float64
-	var radius float64
 	var base, height float64
 	var menu int64
 
 	fmt.Println("2D Shapes:")
+	fmt.Println("1 - Circle Calculator")
+	fmt.Println("2 - Midpoint of a line")
+	fmt.Println("3 - Slope of a line")
+	fmt.Println("4 - Distance")
+	fmt.Println("5 - Parallelogram")
+	fmt.Print("Input No: ")
+
+	fmt.Scan(&menu)
+
+	switch menu {
+	case 1:
+		CircleCal()
+		break
+	case 2:
+		midpoint(x1, y1, x2, y2)
+		break
+	case 3:
+		slope(x1, y1, x2, y2)
+		break
+	case 4:
+		distance(x1, y1, x2, y2)
+		break
+	case 5:
+		Parallelogram(base, height)
+		break
+	}
+}
+
+func CircleCal() {
+
+	var Radius float64
+	var radius float64
+	var menu int64
+
+	fmt.Println("Circle Calculator:")
 	fmt.Println("1 - Area of a Circle")
 	fmt.Println("2 - Area of an Annulus")
 	fmt.Println("3 - Circumference of a Circle")
-	fmt.Println("4 - Midpoint of a line")
-	fmt.Println("5 - Slope of a line")
-	fmt.Println("6 - Distance")
-	fmt.Println("7 - Parallelogram")
-	fmt.Print("Input No: ")
 
 	fmt.Scan(&menu)
 
@@ -36,18 +64,6 @@ func Menu() {
 		break
 	case 3:
 		CircumferenceOfCircle(radius)
-		break
-	case 4:
-		midpoint(x1, y1, x2, y2)
-		break
-	case 5:
-		slope(x1, y1, x2, y2)
-		break
-	case 6:
-		distance(x1, y1, x2, y2)
-		break
-	case 7:
-		Parallelogram(base, height)
 		break
 	}
 }
